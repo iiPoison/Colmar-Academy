@@ -32,6 +32,10 @@ body { /* global property */
   background-color: silver;
 }
 
+.lightgrey {
+  background-color: lightgrey;
+}
+
 .width30 {
   width: 30%;
 }
@@ -113,9 +117,6 @@ body { /* global property */
   width: 100%;
   height: 100%;
 }
-
-
-
 
 .text-box-h1 {
   display: block;
@@ -262,15 +263,57 @@ body { /* global property */
 }
 
 /* Part 4 Start learning */
-.head {
-
-}
-
 .head-text {
-  margin: 2rem 4.5rem;
+  margin: 0 4.5rem;
+  background-color: darkred; /* удалить */
 }
 
-.head-text span {
+.head-text h2 {
   font-size: 2.5rem;
   font-weight: bold;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.head-content {
+  margin: 0 4.5rem;
+  /*height: 3rem;*/
+  background-color: tomato; /* удалить */
+}
+
+.head-content-img {
+  width: 25%;
+}
+
+.head-content-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.head-content-text {
+
+}
+
+.head-content-text-h1 {
+
+}
+
+.head-content-text-h1 span {
+
+}
+
+.head-content-text-h2 {
+
+}
+
+.head-content-text-h2 span {
+
+}
+
+.head-content-text-p {
+
+}
+
+.head-content-text-p p {
+
 }
