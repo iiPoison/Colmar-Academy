@@ -9,7 +9,7 @@ body { /* global property */
 }
 
 .content-block {
-  width: 75rem; /* 1300px */
+  width: 75rem; /* 1200px */
   display: flex;
 }
 
@@ -222,7 +222,7 @@ body { /* global property */
   width: 35%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;;
   margin-bottom: 2rem;
 }
 
@@ -432,16 +432,16 @@ footer span {
   font-size: 1.1rem;
 }
 
-ul  {
+footer ul  {
   display: inline-flex;
 }
 
-ul li {
+footer ul li {
   padding: 0 0.8rem;
   font-size: 1.1rem;
 }
 
-ul li a {
+footer ul li a {
   color: red;
   text-decoration:none;
 }
