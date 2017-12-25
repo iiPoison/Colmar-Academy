@@ -52,6 +52,10 @@ body { /* global property */
   margin: 2rem;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 
 /* Part 1 Header + menu */
 /* шрифт для заголовка Kreon */
@@ -347,7 +351,7 @@ body { /* global property */
 .exhibit-content {
   margin-bottom: 2rem;
   display: flex;
-  /*flex-direction: row;*/
+  border-bottom: 2px solid Silver;
 }
 
 .exhibit-content-video {
@@ -406,11 +410,38 @@ body { /* global property */
 }
 
 .exhibit-content-right-element-text ul li:first-child {
-  font-size: 2rem;
+  font-size: 2rem;s
 }
 
 .exhibit-content-right-element-text ul li:last-child {
   font-size: 1.3rem;
   padding-top: 0.5rem; /* по ТЗ 0,25 rem, но смотриться не очень */
   line-height: 1.4;
+}
+
+/* Part6 Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 1.5rem 5rem 1.5rem;
+  width: 100%;
+
+}
+
+footer span {
+  font-size: 1.1rem;
+}
+
+ul  {
+  display: inline-flex;
+}
+
+ul li {
+  padding: 0 0.8rem;
+  font-size: 1.1rem;
+}
+
+ul li a {
+  color: red;
+  text-decoration:none;
 }
