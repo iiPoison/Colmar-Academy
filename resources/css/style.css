@@ -1,23 +1,97 @@
-body { /* global property */
-  font-size: 16px; /* for rem measurement */
+/* Fonts */
+
+/* latin */
+@font-face { /* For menu */
+  font-family: 'Share';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Share Regular'), local('Share-Regular'), url(https://fonts.gstatic.com/s/share/v8/QAIpJutej8pwMhTqANTdOg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
-.divide-block {
+/* latin */
+@font-face { /*For logo-Header */
+  font-family: 'Fenix';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fenix'), local('Fenix-Regular'), url(https://fonts.gstatic.com/s/fenix/v5/kGOpsn7ilqkwQsHyf14dHg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* latin */
+@font-face { /* For .content-text */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Unica One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Unica One'), local('UnicaOne-Regular'), url(https://fonts.gstatic.com/s/unicaone/v5/z3VYemEbD7zsQFQLG6g3SltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dosis Regular'), local('Dosis-Regular'), url(http://fonts.gstatic.com/s/dosis/v7/4hYyXH_8WmbBLamf6WjLwg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* global property and boxes */
+body {
+  font-size: 16px; /* for rem measurement */
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  width: 75rem; /* 1200px */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+}
+
+.divide-block { /* divede and align child block on center */
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.content-block {
-  width: 75rem; /* 1200px */
+.content,
+.content-img,
+.content-video,
+.content-text { /* universal box text + image */
   display: flex;
+  font-family: 'Roboto', sans-serif;
 }
 
-.text-box {
+.content-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.head { /* for block 4 and 5 */
   display: flex;
+  margin: 2rem 0;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+}
+
+.head h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.silver {
+  background-color: silver;
 }
 
 .column {
@@ -28,88 +102,93 @@ body { /* global property */
   flex-direction: row;
 }
 
-.silver {
-  background-color: silver;
-}
-
-.lightgrey {
-  background-color: lightgrey;
-}
-
-.width30 {
-  width: 30%;
-}
-
-.margin-tb-32px {
-  margin: 2rem 0;
-}
-
-.margin-lr-32px {
+.margin-lr32 {  /* for block 4 */
   margin: 0 2rem;
 }
 
-.margin-32px {
-  margin: 2rem;
+.margin-top24 { /* for block 4 */
+  margin-top: 1.5rem;
 }
 
-.space-between {
-  justify-content: space-between;
-}
+/* Content */
 
-
-/* Part 1 Header + menu */
-/* шрифт для заголовка Kreon */
-.display-header {
-  display: block; /* display: block; display: none; */
-}
-
-.header {
-  /*height: 2rem;/*удалить */
-  /*background-color: red;/*удалить */
+/* Block 1 Header*/
+header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
   height: 4rem; /* 64px */
-  align-items: center;
+  position: fixed;
+  z-index: 2;
+  justify-content: center;
+  margin-top: 0.5rem;
+  border-bottom: 2px solid brown;
+  background-color: white;
 }
 
-
-
-.logo-heder {
+.main-menu {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  height: 2rem; /* 32px */
-  margin-left: 1.5rem; /* 24px */
+  justify-content: space-between;
+  margin: 0 1.5rem; /* 24px */
 }
 
-.logo-heder img {
-  height: 3rem; /* 48px */  /* откоректировать на уровне шрифта */
-  width: auto;
-}
-
-.menu-header {
+.main-menu .logo {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  margin-right: 1.5rem; /* 24px */
 }
 
-.menu-header span {
-  padding: 0 0.5rem; /* 0 8px */
+.main-menu .logo img {
+  width: 2.5rem;
+  height: auto;
 }
 
-.menu-header span a {
-  color: black;
+.main-menu .logo h1 {
+  display: flex;
+  font-family: 'Fenix', serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.main-menu .logo h1 span {
+  color: brown;
+}
+
+.main-menu .menu {
+  display: flex;
+  align-items: center;
+}
+
+.main-menu .menu ul {
+  display: flex;
+}
+
+.main-menu .menu ul li {
+  margin: 0 0.5rem;
+  background-color: black;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px
+}
+
+.main-menu .menu ul li:hover {
+  background-color: maroon;
+}
+
+.main-menu .menu ul li:active {
+  background-color: brown;
+}
+
+.main-menu .menu ul li a{
+  color: white;
   text-decoration: none;
+  font-family: 'Share', cursive;
+  font-size: 1.1rem;
 }
 
-
-.mobile-menu {
+.mobile-menu { /* mobile-menu */
   height: 4rem; /* 64px */
   display: none; /* убирает мобильное меню */
   align-items: center;
-
 }
 
 .mobile-menu-align {
@@ -120,328 +199,312 @@ body { /* global property */
   justify-content: space-between;
 }
 
-/* Part 2 Learn something */
 
-.img-box {
-  display: flex;
-  margin: 2rem 1.5rem;
+
+/* Block 2 Learn something*/
+#learn-something {
+  width: inherit;
+  background-color: silver;
+  border-radius: 20px;
+}
+
+#learn-something .content .content-img {
   width: 60%;
-  height: auto;
+  margin: 2rem 1.5rem;
+
 }
 
-.img-box img {
-  width: 100%;
-  height: 100%;
+#learn-something .content .content-img img {
+  border-radius: 5px;
 }
 
-.text-box-h1 {
-  display: block;
-  margin: 0.8rem;
-}
-.text-box-h1 span {
-  font-size: 2.3rem;
-  padding: 1rem auto;
-
-  text-align: center;
-}
-
-.text-box-h2 {
-  display: block;
-  margin: 0.8rem;
-}
-.text-box-h2 span {
-  font-size: 1.3rem;
-  padding: 1rem auto;
-  text-align: center;
-}
-
-.text-box-button {
-  display: flex;
-  justify-content: center;
+#learn-something .content .content-text {
   align-items: center;
-  margin: 0.8rem;
-  background-color: dimgray;
-  width: 100%;
-  height: 2rem;
-}
-.text-box-button span {
-  font-size: 1rem;
-  text-align: center;
-
-}
-.text-box-button span a {
-  color: black;
-  text-decoration: none;
 }
 
-
-/* Part 3 to keep practicing */
-
-.left-column {
-  width: 65%;
-  margin-bottom: 2rem;
+#learn-something .content .content-text ul li:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.8rem;
 }
 
-.left-column-img {
-  margin: 2rem 1rem 2rem 1.5rem;
-  width: 92%
+#learn-something .content .content-text ul li:nth-child(even) {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
 }
 
-.left-column-img img {
-  width: 100%;
-  height: 100%
-}
-
-.left-column-h1 {
-  margin: 0 1rem 2rem 1.5rem
-}
-
-.left-column-h1 span {
-  font-size: 2.7rem;
-}
-
-.left-column-p {
-  margin: 2rem 1rem 2rem 1.5rem
-}
-
-.left-column-p p {
-  font-size: 1.1rem;
-  line-height: 1.3;
-}
-
-.left-column-footer {
-  margin: 2rem 1rem 2rem 1.5rem
-}
-
-.left-column-footer span {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.right-column {
-  width: 35%;
+#learn-something .content .content-text ul li a {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;;
-  margin-bottom: 2rem;
-}
-
-.right-column-content {
-  display: flex;
-  margin-top: 2rem;
-}
-
-.right-column-content-img {
-  width: 35%;
-  margin: 0.5rem;
-}
-
-.right-column-content-img img {
-  height: 100%;
-  width: 100%;
-}
-
-.right-column-content-text {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  margin-left: 0.5rem;
-}
-
-.right-column-content-text-h1 {
-  margin: 0.5rem;
-}
-
-.right-column-content-text-h1 span {
-  font-size: 1.8rem;
-}
-
-.right-column-content-text-p {
-  margin: 0.5rem;
-}
-
-.right-column-content-text-p span {
-  font-size: 1.3rem;
-}
-
-.right-column-content-text-link {
-  margin: 0.5rem;
-}
-
-.right-column-content-text-link span {
-  font-size: 1rem;
-}
-
-.right-column-content-text-link span a {
-  color: dodgerblue;
+  padding: 0.75rem 0rem;
+  background-color: black;
+  color: white;
   text-decoration: none;
+  font-size: 1.3rem;
+  border-radius: 5px;
 }
 
-/* Part 4 Start learning */
-.head-text {  /* and part5 */
-  margin: 0 4.5rem;
-  /*background-color: darkred; /* удалить */
+#learn-something .content .content-text ul li a:hover {
+  background-color: maroon;
 }
 
-.head-text h2 { /* and part5 */
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 2rem 0;
+#learn-something .content .content-text ul li a:active {
+  background-color: brown;
 }
 
-.main-content {
-  margin: 0 4.5rem;
-}
-
-.content {
-  width: 100%;
+/* block 3 to keep practicing */
+#to-keep-practicing {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid brown;
 }
 
-.content-item {
-
-  background-color: white;
-  width: 32%;
+#to-keep-practicing .left {
+  width: 60%;
 }
 
-.content-img {
-  width: 100%;
+#to-keep-practicing .left .content .content-img {
+  margin: 2rem 1.5rem;
+
 }
 
-.content-img img {
-  width: 100%;
-  height: 100%;
+#to-keep-practicing .left .content .content-img img {
+  border-radius: 5px;
 }
 
-.content-text {
+#to-keep-practicing .left .content .content-text {
+  margin: 0 1.5rem;
 }
 
-.content-text-h1 {
-  margin: 0.5rem ;
+#to-keep-practicing .left .content .content-text ul li:first-child {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
-.content-text-h1 span {
-  font-size: 2rem;
+#to-keep-practicing .left .content .content-text ul li:nth-child(even) {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-family: 'Dosis', sans-serif;
+}
+
+#to-keep-practicing .left .content .content-text ul li:last-child {
   font-weight: bold;
 }
 
-.content-text-h2 {
-  margin: 0.25rem 0.5rem;
+#to-keep-practicing .right {
+  width: 40%;
+  margin-top: 1.5rem;
 }
 
-.content-text-h2 span {
-  font-size: 1.5rem;
+#to-keep-practicing .right .content {
+  margin-bottom: 1.5rem;
 }
 
-.content-text-p {
+#to-keep-practicing .right .content.row.silver {
+  border-radius: 5px;
+}
+
+#to-keep-practicing .right .content .content-img {
   margin: 0.5rem;
+  width: 35%;
 }
 
-.content-text-p p {
-  font-size: 1.2rem;
+#to-keep-practicing .right .content .content-img img {
+  border-radius: 5px;
+}
+
+#to-keep-practicing .right .content .content-text {
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+#to-keep-practicing .right .content .content-text ul li:first-child {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+#to-keep-practicing .right .content .content-text ul li:nth-child(even) {
   line-height: 1.4;
+  margin-bottom: 0.4rem;
 }
 
-/* Part 5 Thesis exhibit */
+#to-keep-practicing .right .content .content-text ul li a {
+  color: brown;
+  text-decoration: none;
+}
 
-.exhibit-content {
+/* Block 4 Start learning */
+#start-learn {
+  width: 100%;
+  background-color: silver;
+  border-radius: 20px;
+}
+
+#start-learn .set-of-img {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 4.5rem 2rem 4.5rem;
+  justify-content: space-between;
+}
+
+#start-learn .set-of-img .content {
+  width: 31%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#start-learn .set-of-img .content .content-img {
+
+}
+
+#start-learn .set-of-img .content .content-img img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#start-learn .set-of-img .content .content-text {
+    margin: 1.5rem 0 1.5rem 1.5rem;;
+    margin:
+}
+
+#start-learn .set-of-img .content .content-text ul li:first-child {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+
+#start-learn .set-of-img .content .content-text ul li:nth-child(even) {
+  font-family: 'Unica One', cursive;
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+#start-learn .set-of-img .content .content-text ul li:last-child {
+  padding: 0.5rem 0;
+  line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+/* Block 5 Thesis exhibit */
+
+#thesis-exhibit {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid brown;
+}
+
+#thesis-exhibit .staffing {
   margin-bottom: 2rem;
   display: flex;
-  border-bottom: 2px solid Silver;
+  flex-direction: row;
 }
 
-.exhibit-content-video {
+#thesis-exhibit .staffing .left {
   width: 60%;
+}
+
+#thesis-exhibit .staffing .left .content-video {
   margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
-.exhibit-content-video-element {
-  width: 100%;
-
-}
-
-.exhibit-content-video-element video {
+#thesis-exhibit .staffing .left .content-video video {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 
-.exhibit-content-video-text {
-  margin: 1.5rem 1.5rem 0 1.5rem;
-
+#thesis-exhibit .staffing .left .content .content-text {
+  margin: 0 1.5rem;
 }
 
-.exhibit-content-video-text ul li:first-child {
-  font-size: 2rem;
+#thesis-exhibit .staffing .left .content .content-text ul li:first-child {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
-.exhibit-content-video-text ul li:last-child {
+#thesis-exhibit .staffing .left .content .content-text ul li:last-child {
   font-size: 1.3rem;
-  padding-top: 1rem; /* по ТЗ 0,25 rem, но смотриться не очень */
-  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-family: 'Dosis', sans-serif;
 }
 
-
-.exhibit-content-right {
+#thesis-exhibit .staffing .right {
   width: 40%;
 }
 
-.exhibit-content-right-element {
-  display: flex;
+#thesis-exhibit .staffing .right .content.row.silver {
+  margin-bottom: 1rem;
 }
 
-.exhibit-content-right-element-img {
+#thesis-exhibit .staffing .right .content {
+  border-radius: 5px;
+}
+
+#thesis-exhibit .staffing .right .content .content-img {
   width: 35%;
   height: auto;
   margin: 0.5rem;
 }
 
-.exhibit-content-right-element-img img {
-  width: 100%;
-  height: 100%;
+#thesis-exhibit .staffing .right .content .content-img img {
+  border-radius: 5px;
 }
 
-.exhibit-content-right-element-text {
-  display: flex;
+#thesis-exhibit .staffing .right .content .content-text {
   align-items: center;
+  width: 65%;
+  margin: 0 0.5rem;
 }
 
-.exhibit-content-right-element-text ul li:first-child {
-  font-size: 2rem;s
+#thesis-exhibit .staffing .right .content .content-text ul li:first-child {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
 }
 
-.exhibit-content-right-element-text ul li:last-child {
-  font-size: 1.3rem;
-  padding-top: 0.5rem; /* по ТЗ 0,25 rem, но смотриться не очень */
+#thesis-exhibit .staffing .right .content .content-text ul li:last-child {
+  padding: 0.5rem 0;
   line-height: 1.4;
+  font-size: 1.1rem;
 }
 
-/* Part6 Footer */
+/* Block 6 Footer */
 footer {
+  height: 5rem;
   display: flex;
   justify-content: space-between;
-  margin: 0.5rem 1.5rem 5rem 1.5rem;
   width: 100%;
-
 }
 
 footer span {
-  font-size: 1.1rem;
+  font-family: 'Fenix', serif;
+  margin: 0.5rem 0 0 1.5rem;
 }
 
-footer ul  {
-  display: inline-flex;
+footer ul {
+  margin: 0.5rem 1.5rem 0 0;
+  display: flex;
 }
 
 footer ul li {
-  padding: 0 0.8rem;
-  font-size: 1.1rem;
+  margin: 0.5rem 1rem;
 }
 
 footer ul li a {
-  color: red;
-  text-decoration:none;
+  color: brown;
+  text-decoration: none;
+  font-family: 'Share', cursive;
+  font-size: 1.1rem;
+  padding-bottom: 0;
+}
+
+footer ul li a:hover {
+  border-bottom: 1px solid brown;
+  border-top: 1px solid brown;
 }
