@@ -41,6 +41,8 @@ body {
   font-size: 16px; /* for rem measurement */
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .main-content {
@@ -79,10 +81,11 @@ body {
 .head h2 {
   font-size: 2.5rem;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 .silver {
-  background-color: silver;
+  border: 1px solid brown;
 }
 
 .column {
@@ -112,7 +115,6 @@ header {
   position: fixed;
   z-index: 2;
   justify-content: center;
-  margin-top: 0.5rem;
   border-bottom: 2px solid brown;
   background-color: white;
 }
@@ -190,13 +192,11 @@ header {
   justify-content: space-between;
 }
 
-
-
 /* Block 2 Learn something*/
 #learn-something {
   width: inherit;
-  background-color: silver;
-  border-radius: 20px;
+  border: 2px solid brown;
+  border-radius: 10px;
 }
 
 #learn-something .content .content-img {
@@ -220,8 +220,9 @@ header {
 }
 
 #learn-something .content .content-text ul li:nth-child(even) {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1.8rem;
+  font-family: 'Dosis', sans-serif;
 }
 
 #learn-something .content .content-text ul li a {
@@ -233,6 +234,7 @@ header {
   text-decoration: none;
   font-size: 1.3rem;
   border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
 }
 
 #learn-something .content .content-text ul li a:hover {
@@ -294,6 +296,11 @@ header {
   margin-bottom: 1.5rem;
 }
 
+#to-keep-practicing .right .content:hover {
+  border: 2px solid brown;
+  box-shadow: 0 0 1em 0.1em maroon;
+}
+
 #to-keep-practicing .right .content.row.silver {
   border-radius: 5px;
 }
@@ -331,8 +338,9 @@ header {
 /* Block 4 Start learning */
 #start-learn {
   width: 100%;
-  background-color: silver;
-  border-radius: 20px;
+  border: 2px solid brown;
+  border-radius: 10px;
+
 }
 
 #start-learn .set-of-img {
@@ -346,6 +354,12 @@ header {
   width: 31%;
   background-color: white;
   border-radius: 5px;
+  border: 1px solid brown;
+}
+
+#start-learn .set-of-img .content:hover {
+  border: 2px solid brown;
+  color: brown;
 }
 
 #start-learn .set-of-img .content .content-img {
@@ -437,6 +451,11 @@ header {
   border-radius: 5px;
 }
 
+#thesis-exhibit .staffing .right .content:hover {
+  border: 2px solid brown;
+  box-shadow: 0 0 1em 0.1em maroon;
+}
+
 #thesis-exhibit .staffing .right .content .content-img {
   width: 35%;
   height: auto;
@@ -476,6 +495,8 @@ footer {
 footer span {
   font-family: 'Fenix', serif;
   margin: 0.5rem 0 0 1.5rem;
+  font-size: 1.1rem;
+  padding-top: 1rem;
 }
 
 footer ul {
