@@ -28,7 +28,7 @@
 }
 
 /* latin */
-@font-face {
+@font-face { /* For Block 4 "COURCES" */
   font-family: 'Unica One';
   font-style: normal;
   font-weight: 400;
@@ -37,7 +37,7 @@
 }
 
 /* latin */
-@font-face {
+@font-face { /* For Block 3 and 5 long text */
   font-family: 'Dosis';
   font-style: normal;
   font-weight: 400;
@@ -287,7 +287,7 @@ header {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   line-height: 1.3;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Dosis' !important, sans-serif;
 }
 
 #to-keep-practicing .left .content .content-text ul li:last-child {
@@ -431,7 +431,7 @@ header {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   line-height: 1.3;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Dosis' !important, sans-serif;
 }
 
 #thesis-exhibit .staffing .right {
