@@ -1,3 +1,16 @@
+/*
+
+Comments for project:
+
+1. In header menu in block 1 button have a pseudo-class "hover" and "active", change color
+2. In block 2 button "Start here" have a pseudo-class "hover" and "active", change color
+3. In block 3 elements in right column have a pseudo-class "hover", change color
+4. In block 4 elements have a pseudo-class "hover", change color
+5. In block 5 elements in right column have a pseudo-class "hover", change color
+6. In footer in block 6 "Terms" and "Privacy" have a pseudo-class "hover", shown border top and botton
+
+*/
+
 /* Fonts */
 
 /* latin */
@@ -94,9 +107,9 @@ body {
   flex-direction: column;
 }
 
-.row {
+/*.row {
   flex-direction: row;
-}
+}*/
 
 .margin-lr32 {  /* for block 4 */
   margin: 0 2rem;
@@ -106,11 +119,11 @@ body {
   margin-top: 1.5rem;
 }
 
-.hiden {
+.hiden { /* for img in block 3 in right column */
   display: none;
 }
 
-.visible {
+.visible { /* for img in block 3 in right column */
   display:block;
 }
 
@@ -234,9 +247,7 @@ header {
   .main-menu .logo h1 {
     display: none;
   }
-}
 
-@media only screen and (max-width: 480px) {
   .main-menu {
     display: none;
   }
@@ -247,8 +258,6 @@ header {
     margin-top: 1rem;
   }
 }
-
-
 
 /* Block 2 Learn something*/
 #learn-something {
@@ -342,6 +351,7 @@ header {
     justify-content: center;
     margin-bottom: 2rem;
   }
+
   #learn-something .content .content-text ul li:first-child {
       font-size: 3rem;
   }
@@ -352,12 +362,36 @@ header {
   }
 
   #learn-something .content .content-text ul li a {
-
     padding: 0.75rem 0rem;
-    background-color: black;
     font-size: 1.3rem;
   }
+}
 
+@media only screen and (max-width: 540px) {
+  #learn-something .content .content-text ul {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #learn-something .content .content-text ul li:first-child {
+      font-size: 2.5rem;
+  }
+
+  #learn-something .content .content-text ul li:nth-child(even) {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  #learn-something .content .content-text ul li:last-child {
+    width: 70%;
+    margin-left: 2.7rem;
+  }
+
+  #learn-something .content .content-text ul li a {
+    padding: 0.75rem 0rem;
+    font-size: 1.3rem;
+
+  }
 }
 
 
@@ -418,7 +452,7 @@ header {
   box-shadow: 0 0 1em 0.1em maroon;
 }
 
-#to-keep-practicing .right .content.row.silver {
+#to-keep-practicing .right .content.silver {
   border-radius: 5px;
 }
 
@@ -793,6 +827,37 @@ header {
   padding: 0.5rem 0;
   line-height: 1.4;
   font-size: 1.1rem;
+}
+
+/* Media query for Block 5 */
+@media only screen and (max-width: 1050px) {
+  #thesis-exhibit .staffing .left {
+    width: 50%;
+  }
+
+  #thesis-exhibit .staffing .right {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #thesis-exhibit .staffing .right {
+    display: none;
+  }
+
+  #thesis-exhibit .staffing .left {
+    width: 100%;
+  }
+
+  #thesis-exhibit .staffing .left .content .content-text ul li:first-child {
+    display: none;
+  }
+
+  #thesis-exhibit .staffing .left .content .content-text ul li:last-child {
+    display: none;
+  }
+
+
 }
 
 /* Block 6 Footer */
