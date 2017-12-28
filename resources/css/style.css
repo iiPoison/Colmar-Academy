@@ -46,11 +46,13 @@ body {
 }
 
 .main-content {
-  width: 75rem; /* 1200px */
+  max-width: 75rem; /* 1200px */
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 5rem;
+
 }
 
 .divide-block { /* divede and align child block on center */
@@ -110,6 +112,7 @@ body {
 header {
   display: flex;
   flex-direction: column;
+  max-width: 75rem;
   width: 100%;
   height: 4rem; /* 64px */
   position: fixed;
@@ -192,11 +195,62 @@ header {
   justify-content: space-between;
 }
 
+/* Media query for Header */
+@media only screen and (max-width: 805px) {
+  .main-menu .logo img {
+    width: 2rem;
+  }
+
+  .main-menu .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-menu .menu ul li {
+    margin: 0 0.3rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .main-menu .menu ul li a {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media only screen and (max-width: 610px) {
+  .main-menu .logo h1 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .main-menu .logo h1 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
+
+
+
 /* Block 2 Learn something*/
 #learn-something {
   width: inherit;
   border: 2px solid brown;
   border-radius: 10px;
+}
+
+#learn-something .content {
+  flex-direction: row;
 }
 
 #learn-something .content .content-img {
@@ -244,6 +298,60 @@ header {
 #learn-something .content .content-text ul li a:active {
   background-color: brown;
 }
+
+/* Media query for Block 2 */
+@media only screen and (max-width: 1030px) {
+  #learn-something .content .content-text ul li:first-child {
+      font-size: 2rem;
+  }
+
+  #learn-something .content .content-text ul li:nth-child(even) {
+    font-size: 1.1rem;
+  }
+
+  #learn-something .content .content-text ul li a {
+
+    padding: 0.6rem 0rem;
+    background-color: black;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 805px) {
+  #learn-something .content {
+    flex-direction: column;
+  }
+
+  #learn-something .content .content-img {
+    width: 92%;
+    /margin: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  #learn-something .content .content-text {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  #learn-something .content .content-text ul li:first-child {
+      font-size: 3rem;
+  }
+
+  #learn-something .content .content-text ul li:nth-child(even) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #learn-something .content .content-text ul li a {
+
+    padding: 0.75rem 0rem;
+    background-color: black;
+    font-size: 1.3rem;
+  }
+
+}
+
 
 /* block 3 to keep practicing */
 #to-keep-practicing {
