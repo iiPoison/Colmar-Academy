@@ -560,17 +560,16 @@ header {
   #to-keep-practicing .right .content .content-text {
     margin-bottom: 0.5rem;
   }
-
 }
-
-
 
 /* Block 4 Start learning */
 #start-learn {
   width: 100%;
   border: 2px solid brown;
   border-radius: 10px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #start-learn .set-of-img {
@@ -585,6 +584,7 @@ header {
   background-color: white;
   border-radius: 5px;
   border: 1px solid brown;
+
 }
 
 #start-learn .set-of-img .content:hover {
@@ -592,9 +592,6 @@ header {
   color: brown;
 }
 
-#start-learn .set-of-img .content .content-img {
-
-}
 
 #start-learn .set-of-img .content .content-img img {
   border-top-right-radius: 5px;
@@ -602,8 +599,7 @@ header {
 }
 
 #start-learn .set-of-img .content .content-text {
-    margin: 1.5rem 0 1.5rem 1.5rem;;
-    margin:
+  margin: 1.5rem 0 1.5rem 1.5rem;
 }
 
 #start-learn .set-of-img .content .content-text ul li:first-child {
@@ -624,8 +620,93 @@ header {
   font-size: 1.1rem;
 }
 
-/* Block 5 Thesis exhibit */
+/* Media query fo block 4 */
+@media only screen and (max-width: 1150px) {
+  #start-learn .set-of-img {
+    max-width: 700px;
+    width: 100%;
 
+  }
+
+  #start-learn .set-of-img .content {
+    width: 45%;
+    margin: 0.75rem 0;
+  }
+
+  .margin-lr32 {  /* for block 4 */
+    margin:0;
+  }
+
+  .margin-top24 { /* for block 4 */
+    margin-top:0;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #start-learn {
+    margin: 0 1rem;
+    border: 2px solid white;
+  }
+
+  #start-learn .set-of-img {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+  }
+
+  #start-learn .set-of-img .content {
+    width: 100%;
+
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  #start-learn .set-of-img {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  #start-learn .set-of-img .content {
+    margin: 0.5rem 1rem;
+    border: 1px solid white;
+    background-color: brown;
+    color: white;
+  }
+
+  #start-learn .set-of-img .content .content-img img {
+    display: none;
+  }
+
+  #start-learn .set-of-img .content .content-text ul li:nth-child(even) {
+    display: none;
+  }
+
+  #start-learn .set-of-img .content .content-text ul li:last-child {
+    display: none;
+  }
+
+  #start-learn .set-of-img .content .content-text {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+  }
+
+  #start-learn .set-of-img .content .content-text ul li:first-child {
+
+  }
+
+  #start-learn .set-of-img .content:hover {
+    color: rosybrown;
+  }
+
+}
+
+
+
+/* Block 5 Thesis exhibit */
 #thesis-exhibit {
   display: flex;
   flex-direction: column;
@@ -749,4 +830,17 @@ footer ul li a {
 footer ul li a:hover {
   border-bottom: 1px solid brown;
   border-top: 1px solid brown;
+}
+
+/* Media query for Block 5 footer */
+
+@media only screen and (max-width: 1150px) {
+  footer ul {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
 }
